@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar {
+    /* display: none; */
+    width: 1px;
+    margin-left: 5px;
   }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+.linkText{
+    @apply text-black text-base sm:text-lg font-medium
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.userBg{
+    @apply bg-[#adb5bd] rounded-full w-[40px] h-[40px] relative overflow-hidden cursor-pointer
+}
+
+.navigationDivLinks{
+    @apply py-4 px-8 cursor-pointer hover:bg-black/[0.1] transition-all ease-in-out hidden sm:flex items-center gap-4
+}
+
+.navigationText{
+    @apply text-base font-normal text-black
 }
