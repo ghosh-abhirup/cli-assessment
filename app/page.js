@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Image from "next/image";
 import InfiniteScrollBox from "@/components/InfiniteScrollBox";
 import { topTeamOfTheWeek, topUsers } from "@/public/data";
+import Feed from "@/components/Feed";
 
 export default function Home() {
   return (
@@ -29,10 +30,10 @@ export default function Home() {
         </div>
 
         <div className="col_2 flex-1 mr-4">
-          <p className="font-bold text-2xl leading-6">My Feed</p>
+          <Feed />
         </div>
 
-        <div className="col_3 w-[25rem] max-h-[600px] overflow-y-auto flex flex-col gap-6 justify-between items-start">
+        <div className="col_3 w-[25rem] max-h-[700px] overflow-y-auto flex flex-col gap-6 justify-between items-start">
           <InfiniteScrollBox
             data={topTeamOfTheWeek}
             heading=" Top Global Users of the week"
