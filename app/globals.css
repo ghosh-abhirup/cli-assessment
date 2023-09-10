@@ -36,3 +36,7 @@ body{
 .navigationText{
     @apply text-base font-normal text-black
 }
+
+.postLinks{
+  @apply flex gap-2 items-center 
+}

@@ -7,10 +7,10 @@ import Feed from "@/components/Feed";
 
 export default function Home() {
   return (
-    <div className="bg-white max-h-screen overflow-hidden">
+    <div className="bg-white h-screen ">
       <Navbar />
-      <div className="flex gap-2 w-full mt-4 px-4">
-        <div className="col_1 w-[20rem] max-h-[600px] overflow-y-auto flex flex-col gap-6 justify-between items-start">
+      <div className="flex gap-2 w-full py-4 px-4">
+        <div className="col_1 w-[20rem] h-screen overflow-y-auto flex flex-col gap-6 items-start">
           <Navigation />
 
           <div className="trendingTopic w-full">
@@ -26,6 +26,33 @@ export default function Home() {
                 className="w-full object-cover"
               />
             </div>
+            <div className="w-[90%] rounded-lg overflow-hidden mt-2">
+              <Image
+                src="/skySunset.jpg"
+                width={100}
+                height={100}
+                alt="trending"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="w-[90%] rounded-lg overflow-hidden mt-2">
+              <Image
+                src="/navbarIcon.jpg"
+                width={100}
+                height={100}
+                alt="trending"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="w-[90%] rounded-lg overflow-hidden mt-2">
+              <Image
+                src="/skySunset.jpg"
+                width={100}
+                height={100}
+                alt="trending"
+                className="w-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -33,7 +60,7 @@ export default function Home() {
           <Feed />
         </div>
 
-        <div className="col_3 w-[25rem] max-h-[700px] overflow-y-auto flex flex-col gap-6 justify-between items-start">
+        <div className="col_3 w-[25rem] h-screen overflow-y-auto flex flex-col gap-6 justify-between items-start">
           <InfiniteScrollBox
             data={topTeamOfTheWeek}
             heading=" Top Global Users of the week"

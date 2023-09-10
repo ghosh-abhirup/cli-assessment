@@ -38,23 +38,39 @@ const PostComponent = () => {
       </div>
 
       <div className="w-full flex justify-between items-center mt-4">
-        <div className="like flex gap-2 items-center">
-          <FontAwesomeIcon size="xl" icon={faThumbsUp} />
+        <div className="like postLinks">
+          <FontAwesomeIcon
+            size="xl"
+            icon={faThumbsUp}
+            className="cursor-pointer"
+          />
           <p className="font-semibold text-lg">1</p>
         </div>
-        <div className="dislike flex gap-2 items-center">
-          <FontAwesomeIcon size="xl" icon={faThumbsDown} />
+        <div className="dislike postLinks">
+          <FontAwesomeIcon
+            size="xl"
+            icon={faThumbsDown}
+            className="cursor-pointer"
+          />
           <p className="font-semibold text-lg">1</p>
         </div>
-        <div className="comment flex gap-2 items-center">
-          <FontAwesomeIcon size="xl" icon={faCommentDots} />
+        <div className="comment postLinks">
+          <FontAwesomeIcon
+            size="xl"
+            icon={faCommentDots}
+            className="cursor-pointer"
+          />
           <p className="font-semibold text-lg">2</p>
         </div>
 
-        <FontAwesomeIcon size="xl" icon={faLink} />
+        <FontAwesomeIcon size="xl" icon={faLink} className="cursor-pointer" />
 
-        <div className="comment flex gap-2 items-center">
-          <FontAwesomeIcon size="xl" icon={faShareFromSquare} />
+        <div className="share postLinks">
+          <FontAwesomeIcon
+            size="xl"
+            icon={faShareFromSquare}
+            className="cursor-pointer"
+          />
           <p className="font-semibold text-lg">2</p>
         </div>
       </div>
