@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import Navbar from "@/components/Navbar";
+
 import Navigation from "@/components/Navigation";
 import Image from "next/image";
 import InfiniteScrollBox from "@/components/InfiniteScrollBox";
@@ -13,7 +12,7 @@ import {
 import Feed from "@/components/Feed";
 import RecommendationSlider from "./RecommendationSlider";
 
-const DesktopView = () => {
+const DesktopScreen = () => {
   return (
     <>
       <div className="flex gap-2 w-full py-4 px-4 flex-wrap">
@@ -98,4 +97,4 @@ const DesktopView = () => {
   );
 };
 
-export default DesktopView;
+export default DesktopScreen;

@@ -4,7 +4,7 @@ import RecommendationSlider from "./RecommendationSlider";
 import { teamRecommendation } from "@/public/data";
 import MobileSlider from "./MobileSlider";
 
-const MobileView = () => {
+const MobileScreen = () => {
   return (
     <div className=" w-full h-full flex flex-col items-center">
       <MobileSlider data={teamRecommendation} />
@@ -13,4 +13,4 @@ const MobileView = () => {
   );
 };
 
-export default MobileView;
+export default MobileScreen;
