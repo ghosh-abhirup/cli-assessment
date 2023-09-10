@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
@@ -8,8 +9,8 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
-    // <div className="w-full bg-white fixed top-0 left-0 px-4 py-4">
-    <div className="flex w-full justify-between items-center px-4 py-4 bg-white">
+    // <div className="w-full bg-white fixed  px-4 py-4">
+    <div className="fixed top-0 left-0 z-[100] shadow-lg flex w-full justify-between items-center px-4 py-4 bg-white">
       <div className=" flex gap-2 items-center">
         <div className="imgContainer rounded-full w-[40px] h-[40px] overflow-hidden border-2 border-black">
           <Image

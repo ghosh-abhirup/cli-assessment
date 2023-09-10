@@ -1,9 +1,12 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
-import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faPeopleGroup,
+  faMessage,
+  faEnvelopesBulk,
+  faShareNodes,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   return (

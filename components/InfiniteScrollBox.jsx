@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const InfiniteScrollBox = ({ data, heading, title }) => {
@@ -23,9 +24,7 @@ const InfiniteScrollBox = ({ data, heading, title }) => {
                 </div>
                 <p className="truncate w-[12rem] cursor-pointer">{team}</p>
               </div>
-              <button className="px-4 py-2 bg-[#fd088b] hover:bg-[#d40859] transition-all ease-in text-white font-semibold rounded-md">
-                Join
-              </button>
+              <button className="joinBtn">Join</button>
             </div>
           );
         })}

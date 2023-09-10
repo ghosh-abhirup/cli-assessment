@@ -1,12 +1,14 @@
+"use client";
 import Image from "next/image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faThumbsDown } from "@fortawesome/free-regular-svg-icons";
 import { faLink, faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const PostComponent = () => {
+const PostComponent = ({ data }) => {
   return (
-    <div className="w-[30rem] bg-white shadow-lg rounded-lg py-4 px-6 mx-auto">
+    <div className="w-full sm:w-[30rem] bg-white shadow-lg rounded-lg py-4 px-6 mx-auto">
       <div className="flex gap-2 items-center">
         <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
           <Image
@@ -17,61 +19,58 @@ const PostComponent = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <p className="text-base sm:text-lg cursor-pointer">Ahuja</p>
+        <p className="text-base sm:text-lg cursor-pointer">{data.username}</p>
       </div>
 
       <div className="mt-4">
-        <p className="text-base sm:text-lg font-semibold mb-2">Great</p>
-        <div className="w-full h-[200px] rounded-lg overflow-hidden">
-          <Image
-            src="/skySunset.jpg"
-            width={200}
-            height={200}
+        <p className="text-base sm:text-lg font-semibold mb-2">{data.title}</p>
+        <div className="w-full h-[150px] sm:h-[300px] rounded-lg overflow-hidden">
+          <img
+            src={data.postImage}
             alt="image"
-            className="w-full h-full object-cover"
+            className="w-full sm:w-fit h-full object-cover mx-auto"
           />
         </div>
         <p className="line-clamp-3 text-sm sm:text-base mt-2">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
-          recusandae odit quasi, at laborum asperiores esse ea quo sed saepe!
+          {data.description}
         </p>
       </div>
 
       <div className="w-full flex justify-between items-center mt-4">
         <div className="like postLinks">
           <FontAwesomeIcon
-            size="xl"
+            size={{ xs: "sm", sm: "xl" }}
             icon={faThumbsUp}
             className="cursor-pointer"
           />
-          <p className="font-semibold text-lg">1</p>
+          <p className="font-semibold text-sm sm:text-lg">{data.likes}</p>
         </div>
         <div className="dislike postLinks">
           <FontAwesomeIcon
-            size="xl"
+            size={{ xs: "sm", sm: "xl" }}
             icon={faThumbsDown}
             className="cursor-pointer"
           />
-          <p className="font-semibold text-lg">1</p>
+          <p className="font-semibold text-sm sm:text-lg">{data.dislikes}</p>
         </div>
         <div className="comment postLinks">
           <FontAwesomeIcon
-            size="xl"
+            size={{ xs: "sm", sm: "xl" }}
             icon={faCommentDots}
             className="cursor-pointer"
           />
-          <p className="font-semibold text-lg">2</p>
+          <p className="font-semibold text-sm sm:text-lg">{data.comments}</p>
         </div>
 
         <FontAwesomeIcon size="xl" icon={faLink} className="cursor-pointer" />
 
         <div className="share postLinks">
           <FontAwesomeIcon
-            size="xl"
+            size={{ xs: "sm", sm: "xl" }}
             icon={faShareFromSquare}
             className="cursor-pointer"
           />
-          <p className="font-semibold text-lg">2</p>
+          <p className="font-semibold text-sm sm:text-lg">2</p>
         </div>
       </div>
     </div>

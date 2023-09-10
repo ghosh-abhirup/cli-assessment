@@ -8,6 +8,25 @@ body{
     box-sizing: content-box;
 }
 
+.team-scroller{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  gap: 1rem;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+@media (min-width:680px) {
+  .team-scroller{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 35%;
+    gap: 1rem;
+  }
+}
+
 ::-webkit-scrollbar {
     /* display: none; */
     width: 1px;
@@ -39,4 +58,16 @@ body{
 
 .postLinks{
   @apply flex gap-2 items-center 
+}
+
+.joinBtn{
+  @apply px-4 py-2 bg-[#fd088b] hover:bg-[#d40859] transition-all ease-in text-white font-semibold rounded-md
+}
+
+.hiddenInMobile{
+  @apply hidden sm:flex
+}
+
+.hiddenInDesktop{
+@apply flex sm:hidden
 }
