@@ -38,37 +38,33 @@ const PostComponent = ({ data }) => {
 
       <div className="w-full flex justify-between items-center mt-4">
         <div className="like postLinks">
-          <FontAwesomeIcon
-            size={{ xs: "sm", sm: "xl" }}
-            icon={faThumbsUp}
-            className="cursor-pointer"
-          />
+          <FontAwesomeIcon icon={faThumbsUp} className="cursor-pointer" />
           <p className="font-semibold text-sm sm:text-lg">{data.likes}</p>
         </div>
         <div className="dislike postLinks">
           <FontAwesomeIcon
-            size={{ xs: "sm", sm: "xl" }}
             icon={faThumbsDown}
-            className="cursor-pointer"
+            className="cursor-pointer fa-sm sm:fa-xl"
           />
           <p className="font-semibold text-sm sm:text-lg">{data.dislikes}</p>
         </div>
         <div className="comment postLinks">
           <FontAwesomeIcon
-            size={{ xs: "sm", sm: "xl" }}
             icon={faCommentDots}
-            className="cursor-pointer"
+            className="cursor-pointer fa-sm sm:fa-xl"
           />
           <p className="font-semibold text-sm sm:text-lg">{data.comments}</p>
         </div>
 
-        <FontAwesomeIcon size="xl" icon={faLink} className="cursor-pointer" />
+        <FontAwesomeIcon
+          icon={faLink}
+          className="cursor-pointer fa-sm sm:fa-xl"
+        />
 
         <div className="share postLinks">
           <FontAwesomeIcon
-            size={{ xs: "sm", sm: "xl" }}
             icon={faShareFromSquare}
-            className="cursor-pointer"
+            className="cursor-pointer fa-sm sm:fa-xl"
           />
           <p className="font-semibold text-sm sm:text-lg">2</p>
         </div>

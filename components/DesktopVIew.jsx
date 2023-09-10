@@ -4,11 +4,16 @@ import Navbar from "@/components/Navbar";
 import Navigation from "@/components/Navigation";
 import Image from "next/image";
 import InfiniteScrollBox from "@/components/InfiniteScrollBox";
-import { topTeamOfTheWeek, topUsers, teamRecommendation } from "@/public/data";
+import {
+  topTeamOfTheWeek,
+  topUsers,
+  teamRecommendation,
+  localTopUsers,
+} from "@/public/data";
 import Feed from "@/components/Feed";
 import RecommendationSlider from "./RecommendationSlider";
 
-const DesktopVIew = () => {
+const DesktopView = () => {
   return (
     <>
       <div className="flex gap-2 w-full py-4 px-4 flex-wrap">
@@ -63,7 +68,7 @@ const DesktopVIew = () => {
           <Feed />
         </div>
 
-        <div className=" col_3 w-[25rem] h-screen overflow-y-auto flex flex-col gap-6 justify-between items-start">
+        <div className=" col_3 w-[25rem] h-screen overflow-y-auto flex flex-col gap-6 items-start">
           <InfiniteScrollBox
             data={topTeamOfTheWeek}
             heading=" Top Global Users of the week"
@@ -76,10 +81,21 @@ const DesktopVIew = () => {
               title="user"
             />
           </div>
+          <div className="w-full mt-5">
+            <p className="font-bold text-lg leading-6 text-center w-full mb-4">
+              Top Local Users
+            </p>
+            {localTopUsers.map((user, index) => (
+              <div className="localUsers" key={index}>
+                <p className="font-normal text-lg">{user.name}</p>
+                <p className="font-bold text-lg">{user.score}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default DesktopVIew;
+export default DesktopView;

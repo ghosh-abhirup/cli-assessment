@@ -170,4 +170,18 @@ const teamRecommendation = [
   "WebWhiz",
 ];
 
-export { topTeamOfTheWeek, topUsers, feedPosts, teamRecommendation };
+const localTopUsers = [
+  { name: "Aarav Patel", score: 92 },
+  { name: "Sanya Sharma", score: 85 },
+  { name: "Aditi Singh", score: 88 },
+  { name: "Rahul Kumar", score: 78 },
+  { name: "Priya Mehta", score: 91 },
+];
+
+export {
+  topTeamOfTheWeek,
+  topUsers,
+  feedPosts,
+  teamRecommendation,
+  localTopUsers,
+};

@@ -11,7 +11,7 @@ body{
 .team-scroller{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 50%;
+  grid-auto-columns: 60%;
   gap: 1rem;
 
   overflow-x: auto;
@@ -70,4 +70,7 @@ body{
 
 .hiddenInDesktop{
 @apply flex sm:hidden
+}
+.localUsers{
+  @apply px-6 py-4 cursor-pointer w-[90%] flex justify-between items-center bg-white hover:bg-black/[0.2] transition-all ease-in-out
 }
