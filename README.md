@@ -3,4 +3,4 @@
 
 Tech Stack: `NextJS 13` `tailwindCSS`
 
-Deploy Link: 
+Deploy Link: https://cli-assessment.vercel.app/
